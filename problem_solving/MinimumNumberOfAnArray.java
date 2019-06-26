@@ -1,5 +1,5 @@
 package problem_solving;
-// Find the minimum number from an unordered list/array in a naive way 
+// Find the minimum number from an unordered list/array in a naive way
 public class MinimumNumberOfAnArray {
     public static void main(String[] args) {
         int [] x = {20,4,5,10};
@@ -7,7 +7,7 @@ public class MinimumNumberOfAnArray {
         System.out.println("Maximum Value: "+MaxArray(x));
 
     }
-    static int MinArray(int [] arr)
+    private static int MinArray(int [] arr)
     {
         Integer min = Integer.MAX_VALUE;
         for (int i = 0; i<arr.length; i++)
@@ -20,7 +20,7 @@ public class MinimumNumberOfAnArray {
 
         return min;
     }
-    static int MaxArray(int [] arr)
+    private static int MaxArray(int [] arr)
     {
         Integer max = Integer.MIN_VALUE;
         for (int i = 0; i<arr.length; i++)
