@@ -1,5 +1,5 @@
 package problem_solving;
-
+//Find the Second largest element from an unsorted array
 import java.util.Arrays;
 
 public class SecondLargestElArray {
@@ -31,7 +31,7 @@ public class SecondLargestElArray {
                 secondHighest = highest;
                 highest = arr[i];
             }
-            if (arr[i]< highest && arr[i]> secondHighest)
+            if ((arr[i] < highest) && (arr[i] > secondHighest))
             {
                 secondHighest = arr[i];
             }
