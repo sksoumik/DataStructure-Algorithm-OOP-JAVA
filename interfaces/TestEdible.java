@@ -1,26 +1,76 @@
 package interfaces;
-// An interface is  a class like construct that contains only
-// constants and abstruct methods.
 
-interface Animal{
-    public void animalSound();
-    public void sleep();
+
+interface Edible{
+    public abstract String howToEat();
 }
-class Pig implements Animal {
-    public void animalSound(){
-        System.out.println("The pig says: wee wee");
-    }
-    public void sleep(){
-        System.out.println("ZZzz");
 
-    }
+
+abstract class Animals{
+    public abstract String sound();
 
 }
-// Driver class
-class Test{
+
+
+class Chicken extends Animals implements Edible{
+    public String howToEat(){
+        return "Chicken: Fry it!";
+    }
+    public String sound(){
+        return "Chicken: Cock cock!";
+    }
+}
+
+
+class Tiger extends Animals{
+    public String sound(){
+        return "Tiger: ROOOOOAR!";
+    }
+}
+
+
+abstract class Fruit implements Edible{
+
+}
+
+
+class Apple extends Fruit{
+    public String howToEat(){
+        return "Apple: Make apple cider";
+    }
+}
+
+
+class Orange extends Fruit{
+    public String howToEat(){
+        return "Orange: Make orange juice";
+    }
+}
+
+/********************Driver program*********************/
+public class TestEdible {
     public static void main(String[] args) {
-        Pig myPig = new Pig();
-        myPig.animalSound();
-        myPig.sleep();
+        Object[] objects = {new Tiger(),new Chicken(), new Apple()};
+
+        for(int i=0; i<objects.length; i++)
+        {
+            if (objects[i] instanceof Edible)
+            {
+                System.out.println(((Edible)objects[i]).howToEat());
+            }
+            if (objects[i] instanceof  Animals)
+            {
+                System.out.println(((Animals)objects[i]).sound());
+            }
+        }
     }
 }
+
+
+/*
+Output:
+Tiger: ROOOOOAR!
+Chicken: Fry it!
+Chicken: Cock cock!
+Apple: Make apple cider
+ */
