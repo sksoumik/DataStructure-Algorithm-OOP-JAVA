@@ -1,14 +1,8 @@
 package hacker_rank_10_Days_of_Statistics;
-import java.io.*;
 import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
-
 public class MeanMedianMode {
 
     public static void main(String[] args) {
-        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
         Scanner in = new Scanner(System.in);
         int size = in.nextInt();
         int[] inputArr = new int[size];
