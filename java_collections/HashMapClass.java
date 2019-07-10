@@ -12,14 +12,22 @@ public class HashMapClass {
         name.put("Soumik", 23);
         name.put("Tanisha", 21);
         name.put("Kabir", 25);
+        // Get key and values
+        for (Map.Entry m: name.entrySet()){
+            System.out.println(m.getKey() + ": "+ m.getValue());
+        }
+        name.putIfAbsent("Shakib", 32);
 
-        System.out.println("Map size is :"+name.size());
         System.out.println(name);
-        System.out.println(name.get("Soumik")); // returns the key of Soumik
-        name.clear(); // removes everything from HashMap
-        System.out.println(name); //Prints empty Map => {}
-        System.out.println(name.isEmpty()); // Return true if the list is empty,
-                                       //otherwise false
+
+        HashMap<String, Integer> map = new HashMap<>();
+        map.put("Tamim", 31);
+        map.putAll(name);
+        System.out.println(map);
+        map.clear();
+        System.out.println("After clearnig map \n" +map);
+        System.out.println(name);
+
     }
 
 }
